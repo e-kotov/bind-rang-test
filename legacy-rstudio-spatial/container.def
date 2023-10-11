@@ -1,0 +1,27 @@
+Bootstrap: docker
+From: rocker/rstudio:3.3.2
+
+%environment
+
+export RANG_PATH=/rang.R
+export RPORT=${RPORT:-8787}
+export USER=$(whoami)
+export PASSWORD=${PASSWORD:-set_your_password}
+
+%files
+
+rang.R /rang.R
+
+%post
+
+export RANG_PATH=/rang.R
+apt-get update -qq \
+	&& apt-get install -y libpcre3-dev zlib1g-dev pkg-config libcurl4-openssl-dev \
+	&& apt-get install -y gdal-bin libgdal-dev libproj-dev
+Rscript $RANG_PATH
+
+%startscript
+
+exec /usr/lib/rstudio-server/bin/rserver \
+    --auth-none=0 --auth-pam-helper-path=pam-helper \
+    --server-user=${USER} --www-port=${RPORT}
