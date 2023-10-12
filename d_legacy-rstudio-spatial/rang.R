@@ -145,15 +145,15 @@ if (Sys.getenv("CACHE_PATH") != "") {
     .build.raw.tarball(raw.tarball.path = raw.tarball.path, x = x, version = version, tarball.path = tarball.path, current.r.version = current.r.version)
     return(tarball.path)
 }
-installation.order <- structure(list(x = c("lattice", "sp"), version = c("0.20-34", 
-"1.2-3"), source = c("cran", "cran"), handle = c("lattice", "sp"
-), uid = c(NA_character_, NA_character_)), class = "data.frame", row.names = c(NA, 
--2L))
+installation.order <- structure(list(x = c("lattice", "sp", "rgdal"), version = c("0.20-35", 
+"1.2-5", "1.2-16"), source = c("cran", "cran", "cran"), handle = c("lattice", 
+"sp", "rgdal"), uid = c(NA_character_, NA_character_, NA_character_
+)), class = "data.frame", row.names = c(NA, -3L))
 
 verbose <- TRUE
 lib <- NA
 cran.mirror <- "https://cran.r-project.org/"
-bioc.mirror <- "https://bioconductor.org/packages/3.4/"
+bioc.mirror <- "https://bioconductor.org/packages/3.6/"
 
 if (nrow(installation.order) >= 1) {
     for (i in seq(from = 1, to = nrow(installation.order), by = 1)) {
@@ -170,22 +170,22 @@ if (nrow(installation.order) >= 1) {
 }
 ## ## To reconstruct this file, please install version 0.3.0 of `rang` and run:
 ## rang <- 
-## structure(list(call = resolve(pkgs = c("sp"), snapshot_date = "2016-11-30"), 
+## structure(list(call = resolve(pkgs = c("sp", "rgdal"), snapshot_date = "2017-11-30"), 
 ##     ranglets = list(`cran::sp` = structure(list(pkgref = "cran::sp", 
-##         no_enhances = TRUE, no_suggests = TRUE, snapshot_date = structure(1480464000, class = c("POSIXct", 
+##         no_enhances = TRUE, no_suggests = TRUE, snapshot_date = structure(1.512e+09, class = c("POSIXct", 
 ##         "POSIXt"), tzone = "UTC"), original = structure(list(
-##             snapshot_date = structure(c(1480464000, 1480464000, 
-##             1480464000, 1480464000, 1480464000, 1480464000, 1480464000, 
-##             1480464000, 1480464000, 1480464000, 1480464000, 1480464000, 
-##             1480464000, 1480464000), class = c("POSIXct", "POSIXt"
+##             snapshot_date = structure(c(1.512e+09, 1.512e+09, 
+##             1.512e+09, 1.512e+09, 1.512e+09, 1.512e+09, 1.512e+09, 
+##             1.512e+09, 1.512e+09, 1.512e+09, 1.512e+09, 1.512e+09, 
+##             1.512e+09, 1.512e+09), class = c("POSIXct", "POSIXt"
 ##             ), tzone = "UTC"), x = c("sp", "sp", "sp", "sp", 
 ##             "sp", "sp", "sp", "sp", "sp", "sp", "sp", "sp", "sp", 
-##             "sp"), x_version = c("1.2-3", "1.2-3", "1.2-3", "1.2-3", 
-##             "1.2-3", "1.2-3", "1.2-3", "1.2-3", "1.2-3", "1.2-3", 
-##             "1.2-3", "1.2-3", "1.2-3", "1.2-3"), x_pubdate = structure(c(1460631561, 
-##             1460631561, 1460631561, 1460631561, 1460631561, 1460631561, 
-##             1460631561, 1460631561, 1460631561, 1460631561, 1460631561, 
-##             1460631561, 1460631561, 1460631561), class = c("POSIXct", 
+##             "sp"), x_version = c("1.2-5", "1.2-5", "1.2-5", "1.2-5", 
+##             "1.2-5", "1.2-5", "1.2-5", "1.2-5", "1.2-5", "1.2-5", 
+##             "1.2-5", "1.2-5", "1.2-5", "1.2-5"), x_pubdate = structure(c(1498727336, 
+##             1498727336, 1498727336, 1498727336, 1498727336, 1498727336, 
+##             1498727336, 1498727336, 1498727336, 1498727336, 1498727336, 
+##             1498727336, 1498727336, 1498727336), class = c("POSIXct", 
 ##             "POSIXt"), tzone = "UTC"), x_pkgref = c("cran::sp", 
 ##             "cran::sp", "cran::sp", "cran::sp", "cran::sp", "cran::sp", 
 ##             "cran::sp", "cran::sp", "cran::sp", "cran::sp", "cran::sp", 
@@ -203,31 +203,108 @@ if (nrow(installation.order) >= 1) {
 ##             "cran::RColorBrewer", "cran::rgdal", "cran::rgeos", 
 ##             "cran::gstat", "cran::maptools", "cran::deldir")), class = "data.frame", row.names = c(NA, 
 ##         -14L)), deps = list(`cran::lattice` = structure(list(
-##             snapshot_date = structure(c(1480464000, 1480464000, 
-##             1480464000, 1480464000, 1480464000, 1480464000, 1480464000, 
-##             1480464000, 1480464000), class = c("POSIXct", "POSIXt"
-##             ), tzone = "UTC"), x = c("lattice", "lattice", "lattice", 
+##             snapshot_date = structure(c(1.512e+09, 1.512e+09, 
+##             1.512e+09, 1.512e+09, 1.512e+09, 1.512e+09, 1.512e+09, 
+##             1.512e+09, 1.512e+09, 1.512e+09), class = c("POSIXct", 
+##             "POSIXt"), tzone = "UTC"), x = c("lattice", "lattice", 
 ##             "lattice", "lattice", "lattice", "lattice", "lattice", 
-##             "lattice"), x_version = c("0.20-34", "0.20-34", "0.20-34", 
-##             "0.20-34", "0.20-34", "0.20-34", "0.20-34", "0.20-34", 
-##             "0.20-34"), x_pubdate = structure(c(1473171203, 1473171203, 
-##             1473171203, 1473171203, 1473171203, 1473171203, 1473171203, 
-##             1473171203, 1473171203), class = c("POSIXct", "POSIXt"
-##             ), tzone = "UTC"), x_pkgref = c("cran::lattice", 
+##             "lattice", "lattice", "lattice"), x_version = c("0.20-35", 
+##             "0.20-35", "0.20-35", "0.20-35", "0.20-35", "0.20-35", 
+##             "0.20-35", "0.20-35", "0.20-35", "0.20-35"), x_pubdate = structure(c(1490465331, 
+##             1490465331, 1490465331, 1490465331, 1490465331, 1490465331, 
+##             1490465331, 1490465331, 1490465331, 1490465331), class = c("POSIXct", 
+##             "POSIXt"), tzone = "UTC"), x_pkgref = c("cran::lattice", 
 ##             "cran::lattice", "cran::lattice", "cran::lattice", 
 ##             "cran::lattice", "cran::lattice", "cran::lattice", 
-##             "cran::lattice", "cran::lattice"), y = c("R", "KernSmooth", 
-##             "MASS", "grid", "grDevices", "graphics", "stats", 
-##             "utils", "chron"), type = c("Depends", "Suggests", 
+##             "cran::lattice", "cran::lattice", "cran::lattice"
+##             ), y = c("R", "KernSmooth", "MASS", "latticeExtra", 
+##             "grid", "grDevices", "graphics", "stats", "utils", 
+##             "chron"), type = c("Depends", "Suggests", "Suggests", 
 ##             "Suggests", "Imports", "Imports", "Imports", "Imports", 
 ##             "Imports", "Enhances"), y_raw_version = c(">= 3.0.0", 
-##             "*", "*", "*", "*", "*", "*", "*", "*"), y_pkgref = c("cran::R", 
-##             "cran::KernSmooth", "cran::MASS", "cran::grid", "cran::grDevices", 
-##             "cran::graphics", "cran::stats", "cran::utils", "cran::chron"
-##             )), class = "data.frame", row.names = c(NA, -9L))), 
-##         unresolved_deps = character(0)), class = "ranglet")), 
-##     snapshot_date = structure(1480464000, class = c("POSIXct", 
+##             "*", "*", "*", "*", "*", "*", "*", "*", "*"), y_pkgref = c("cran::R", 
+##             "cran::KernSmooth", "cran::MASS", "cran::latticeExtra", 
+##             "cran::grid", "cran::grDevices", "cran::graphics", 
+##             "cran::stats", "cran::utils", "cran::chron")), class = "data.frame", row.names = c(NA, 
+##         -10L))), unresolved_deps = character(0)), class = "ranglet"), 
+##         `cran::rgdal` = structure(list(pkgref = "cran::rgdal", 
+##             no_enhances = TRUE, no_suggests = TRUE, snapshot_date = structure(1.512e+09, class = c("POSIXct", 
+##             "POSIXt"), tzone = "UTC"), original = structure(list(
+##                 snapshot_date = structure(c(1.512e+09, 1.512e+09, 
+##                 1.512e+09, 1.512e+09, 1.512e+09, 1.512e+09, 1.512e+09, 
+##                 1.512e+09), class = c("POSIXct", "POSIXt"), tzone = "UTC"), 
+##                 x = c("rgdal", "rgdal", "rgdal", "rgdal", "rgdal", 
+##                 "rgdal", "rgdal", "rgdal"), x_version = c("1.2-16", 
+##                 "1.2-16", "1.2-16", "1.2-16", "1.2-16", "1.2-16", 
+##                 "1.2-16", "1.2-16"), x_pubdate = structure(c(1511288464, 
+##                 1511288464, 1511288464, 1511288464, 1511288464, 
+##                 1511288464, 1511288464, 1511288464), class = c("POSIXct", 
+##                 "POSIXt"), tzone = "UTC"), x_pkgref = c("cran::rgdal", 
+##                 "cran::rgdal", "cran::rgdal", "cran::rgdal", 
+##                 "cran::rgdal", "cran::rgdal", "cran::rgdal", 
+##                 "cran::rgdal"), y = c("R", "methods", "sp", "grDevices", 
+##                 "graphics", "stats", "utils", "sp"), type = c("Depends", 
+##                 "Depends", "Depends", "Imports", "Imports", "Imports", 
+##                 "Imports", "LinkingTo"), y_raw_version = c(">= 3.3.0", 
+##                 "*", ">= 1.1-0", "*", "*", "*", "*", "*"), y_pkgref = c("cran::R", 
+##                 "cran::methods", "cran::sp", "cran::grDevices", 
+##                 "cran::graphics", "cran::stats", "cran::utils", 
+##                 "cran::sp")), class = "data.frame", row.names = c(NA, 
+##             -8L)), deps = list(`cran::sp` = structure(list(snapshot_date = structure(c(1.512e+09, 
+##             1.512e+09, 1.512e+09, 1.512e+09, 1.512e+09, 1.512e+09, 
+##             1.512e+09, 1.512e+09, 1.512e+09, 1.512e+09, 1.512e+09, 
+##             1.512e+09, 1.512e+09, 1.512e+09), class = c("POSIXct", 
+##             "POSIXt"), tzone = "UTC"), x = c("sp", "sp", "sp", 
+##             "sp", "sp", "sp", "sp", "sp", "sp", "sp", "sp", "sp", 
+##             "sp", "sp"), x_version = c("1.2-5", "1.2-5", "1.2-5", 
+##             "1.2-5", "1.2-5", "1.2-5", "1.2-5", "1.2-5", "1.2-5", 
+##             "1.2-5", "1.2-5", "1.2-5", "1.2-5", "1.2-5"), x_pubdate = structure(c(1498727336, 
+##             1498727336, 1498727336, 1498727336, 1498727336, 1498727336, 
+##             1498727336, 1498727336, 1498727336, 1498727336, 1498727336, 
+##             1498727336, 1498727336, 1498727336), class = c("POSIXct", 
+##             "POSIXt"), tzone = "UTC"), x_pkgref = c("cran::sp", 
+##             "cran::sp", "cran::sp", "cran::sp", "cran::sp", "cran::sp", 
+##             "cran::sp", "cran::sp", "cran::sp", "cran::sp", "cran::sp", 
+##             "cran::sp", "cran::sp", "cran::sp"), y = c("R", "methods", 
+##             "utils", "stats", "graphics", "grDevices", "lattice", 
+##             "grid", "RColorBrewer", "rgdal", "rgeos", "gstat", 
+##             "maptools", "deldir"), type = c("Depends", "Depends", 
+##             "Imports", "Imports", "Imports", "Imports", "Imports", 
+##             "Imports", "Suggests", "Suggests", "Suggests", "Suggests", 
+##             "Suggests", "Suggests"), y_raw_version = c(">= 3.0.0", 
+##             "*", "*", "*", "*", "*", "*", "*", "*", ">= 0.8-7", 
+##             ">= 0.3-13", "*", "*", "*"), y_pkgref = c("cran::R", 
+##             "cran::methods", "cran::utils", "cran::stats", "cran::graphics", 
+##             "cran::grDevices", "cran::lattice", "cran::grid", 
+##             "cran::RColorBrewer", "cran::rgdal", "cran::rgeos", 
+##             "cran::gstat", "cran::maptools", "cran::deldir")), class = "data.frame", row.names = c(NA, 
+##             -14L)), `cran::lattice` = structure(list(snapshot_date = structure(c(1.512e+09, 
+##             1.512e+09, 1.512e+09, 1.512e+09, 1.512e+09, 1.512e+09, 
+##             1.512e+09, 1.512e+09, 1.512e+09, 1.512e+09), class = c("POSIXct", 
+##             "POSIXt"), tzone = "UTC"), x = c("lattice", "lattice", 
+##             "lattice", "lattice", "lattice", "lattice", "lattice", 
+##             "lattice", "lattice", "lattice"), x_version = c("0.20-35", 
+##             "0.20-35", "0.20-35", "0.20-35", "0.20-35", "0.20-35", 
+##             "0.20-35", "0.20-35", "0.20-35", "0.20-35"), x_pubdate = structure(c(1490465331, 
+##             1490465331, 1490465331, 1490465331, 1490465331, 1490465331, 
+##             1490465331, 1490465331, 1490465331, 1490465331), class = c("POSIXct", 
+##             "POSIXt"), tzone = "UTC"), x_pkgref = c("cran::lattice", 
+##             "cran::lattice", "cran::lattice", "cran::lattice", 
+##             "cran::lattice", "cran::lattice", "cran::lattice", 
+##             "cran::lattice", "cran::lattice", "cran::lattice"
+##             ), y = c("R", "KernSmooth", "MASS", "latticeExtra", 
+##             "grid", "grDevices", "graphics", "stats", "utils", 
+##             "chron"), type = c("Depends", "Suggests", "Suggests", 
+##             "Suggests", "Imports", "Imports", "Imports", "Imports", 
+##             "Imports", "Enhances"), y_raw_version = c(">= 3.0.0", 
+##             "*", "*", "*", "*", "*", "*", "*", "*", "*"), y_pkgref = c("cran::R", 
+##             "cran::KernSmooth", "cran::MASS", "cran::latticeExtra", 
+##             "cran::grid", "cran::grDevices", "cran::graphics", 
+##             "cran::stats", "cran::utils", "cran::chron")), class = "data.frame", row.names = c(NA, 
+##             -10L))), unresolved_deps = character(0)), class = "ranglet")), 
+##     snapshot_date = structure(1.512e+09, class = c("POSIXct", 
 ##     "POSIXt"), tzone = "UTC"), no_enhances = TRUE, no_suggests = TRUE, 
-##     unresolved_pkgrefs = character(0), sysreqs = character(0), 
-##     r_version = "3.3.2", bioc_version = "3.4", os = "ubuntu-20.04"), class = "rang")
-## rang::export_rang(rang = rang, path = "./legacy-rstudio-spatial/rang.R", verbose = TRUE, lib = NA, cran_mirror = "https://cran.r-project.org/", check_cran_mirror = TRUE, bioc_mirror = "https://bioconductor.org/packages/3.4/")
+##     unresolved_pkgrefs = character(0), sysreqs = c("apt-get install -y libgdal-dev", 
+##     "apt-get install -y gdal-bin", "apt-get install -y libproj-dev"
+##     ), r_version = "3.4.2", bioc_version = "3.6", os = "ubuntu-20.04"), class = "rang")
+## rang::export_rang(rang = rang, path = "./d_legacy-rstudio-spatial/rang.R", verbose = TRUE, lib = NA, cran_mirror = "https://cran.r-project.org/", check_cran_mirror = TRUE, bioc_mirror = "https://bioconductor.org/packages/3.6/")
